@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply Now</title>
+  <link rel="icon" href="img/vxi logo 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: whitesmoke;
+      color: blue;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      animation: fadeInBody 2s ease-in-out;
+    }
+
+    .contact-section {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      opacity: 0;
+      animation: fadeIn 1.5s forwards ease-in-out;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      animation: bounceIn 1.5s infinite alternate ease-in-out;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+      animation: slideIn 1.5s ease-in-out;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid blue;
+      color: black;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    input:focus, textarea:focus {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #4CAF50;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(to right, #4CAF50, #2196F3);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: pulse 1.5s infinite alternate;
+    }
+
+    button:hover {
+      transform: scale(1.2) rotate(3deg);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+    }
+
+    @keyframes fadeInBody {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateX(-100%); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
+    }
+
+    #status-message {
+      margin-top: 15px;
+      font-size: 1rem;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards;
+    }
+  </style>
+</head>
+<body>
+  <h2>We're Hiring!</h2>
+  <p><strong>Join Our Team</strong></p>
+  <p>If you're interested in one of our open positions, start by applying here and attaching your resume.</p>
+
+  <section class="contact-section">
+    <h1>Apply Now</h1>
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="resume">Attach Resume</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+      </div>
+      <button type="submit" id="send-button">Send Application</button>
+    </form>
+    <div id="status-message"></div>
+  </section>
+
+   <!-- Footer Start -->
+   <div class="container-fluid bg-dark py-5 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Company Info -->
+            <div class="col-lg-3 col-md-6">
+                <a href="index.html" class="text-decoration-none">
+                    <img style="width: 7rem;" src="img/vxi logo.png" alt="">
+                </a>
+                <p class="mt-3 text-light">
+                    At VXI's, we blend cutting-edge technology with visionary solutions to transform ideas into reality.
+                </p>
+                <div class="mt-3">
+                  <a href="https://wa.me/+19382541120" 
+
+                  class="btn btn-outline-secondary btn-lg rounded-circle d-inline-flex align-items-center justify-content-center wow fadeIn"
+                  data-wow-delay="0.5s" title="Chat with us on WhatsApp">
+                   <i class="fab fa-whatsapp"></i>
+               </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-secondary">Quick Links</h4>
+                <ul class="list-unstyled mt-3">
+                    <li><a href="about.html" class="text-white text-decoration-none hover-effect"><i class="fas fa-angle-right me-2"></i>About Us</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none hover-effect"><i class="fas fa-angle-right me-2"></i>Contact Us</a></li>
+                    <li><a href="service.html" class="text-white text-decoration-none hover-effect"><i class="fas fa-angle-right me-2"></i>Our Services</a></li>
+                    <li><a href="project.html" class="text-white text-decoration-none hover-effect"><i class="fas fa-angle-right me-2"></i>Our Projects</a></li>
+                </ul>
+            </div>
+
+            <!-- Help Links -->
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-secondary">Help & Support</h4>
+                <ul class="list-unstyled mt-3">
+                  <li><a href="privacy.html" class="text-white text-decoration-none hover-effect"><i class="fas fa-angle-right me-2"></i>Privacy Policy</a></li>
+                    <li><a href="help.html" class="text-white text-decoration-none hover-effect"><i class="fas fa-angle-right me-2"></i>Help</a></li>
+                    <li><a href="faqs.html" class="text-white text-decoration-none hover-effect"><i class="fas fa-angle-right me-2"></i>FAQs</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none hover-effect"><i class="fas fa-angle-right me-2"></i>Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-secondary">VXI meets high‑touch.</h4>
+                <p class="mt-3 text-light">
+                    When it comes to technology, we make it personal.
+                </p>
+            </div>
+        </div>
+
+        <hr class="text-light mt-4">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <span class="text-light">
+                    <p>515 S, Figueroa, Suite 600, Los Angeles, CA 90071</p>
+                    <a href="#" class="text-secondary"><i class="fas fa-copyright me-1"></i>VXI Global Solutions</a>, All rights reserved.
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Smooth fade-in effect */
+    .wow { animation-duration: 1.5s; }
+
+    /* Hover effects for links */
+    .hover-effect {
+        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+    .hover-effect:hover {
+        color: #4CAF50 !important;
+        transform: translateX(5px);
+    }
+
+    /* WhatsApp button animation */
+    .btn-outline-secondary {
+        border-color: #4CAF50;
+        color: #4CAF50;
+        transition: all 0.3s ease-in-out;
+    }
+    .btn-outline-secondary:hover {
+        background: #4CAF50;
+        color: white;
+    }
+</style>
+
+<!-- Footer End -->
+
+  <script>
+    emailjs.init("QCNMytMs663HoRgVS");
+
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const sendButton = document.getElementById("send-button");
+      const statusMessage = document.getElementById("status-message");
+
+      sendButton.disabled = true;
+      statusMessage.style.color = "black";
+      statusMessage.textContent = "Sending message... Please wait.";
+
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      const resumeInput = document.getElementById("resume").files[0];
+
+      if (!resumeInput) {
+        statusMessage.style.color = "red";
+        statusMessage.textContent = "Please attach a resume before submitting.";
+        sendButton.disabled = false;
+        return;
+      }
+
+      if (resumeInput.size > 150000) {
+        statusMessage.style.color = "red";
+        statusMessage.textContent = "File size too large. Please upload a file smaller than 150KB.";
+        sendButton.disabled = false;
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.readAsDataURL(resumeInput);
+
+      reader.onload = function () {
+        const base64File = reader.result.split(",")[1];
+
+        const emailParams = {
+          name: name,
+          phone: phone,
+          email: email,
+          message: message,
+          reply_to: email,
+          resume_data: base64File
+        };
+
+        emailjs.send("service_9474f1t", "template_s8n14ys", emailParams)
+          .then(() => {
+            statusMessage.style.color = "green";
+            statusMessage.textContent = "Thank you for your application! We will review your submission and get back to you soon.";
+            document.getElementById("contact-form").reset();
+          })
+          .catch((error) => {
+            statusMessage.style.color = "red";
+            statusMessage.textContent = "Failed to send message. Please try again.";
+            console.error("Error:", error);
+          })
+          .finally(() => {
+            sendButton.disabled = false;
+          });
+      };
+
+      reader.onerror = function () {
+        statusMessage.style.color = "red";
+        statusMessage.textContent = "Error reading file. Try again.";
+        sendButton.disabled = false;
+      };
+    });
+  </script>
+</body>
+</html>
