@@ -20,20 +20,4 @@ CSS3 – Styling & layout
 
 JavaScript – Interactive features
 
-(Optional) Bootstrap / TailwindCSS – For responsive grid and components
-
-🚀 Getting Started
-1. Clone the repository
-git clone https://github.com/Raymond-blip/VXI-Global-Solutions.git
-2. Open the project
-cd VXI-Global-Solutions
-3. Run locally
-Simply open index.html in your browser.
-
-🌍 Live Demo
-🔗 View Website Here
-
-📞 Contact
-For any inquiries or job applications, reach out via:
-🌐 Company Website
-
+ Bootstrap / TailwindCSS – For responsive grid and components
